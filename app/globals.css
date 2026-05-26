@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background: #06030f;
+  color: #f5f3ff;
+  overflow-x: hidden;
+}
+
+* { -webkit-tap-highlight-color: transparent; }
+
+::selection { background: #8b5cf6; color: #fff; }
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #0c0820; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #6d28d9, #4c1d95); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #8b5cf6; }
+
+/* premium mesh background */
+.mesh-purple {
+  background:
+    radial-gradient(at 20% 20%, rgba(139, 92, 246, 0.25) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(192, 132, 252, 0.15) 0px, transparent 50%),
+    radial-gradient(at 0% 80%, rgba(124, 58, 237, 0.18) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, rgba(76, 29, 149, 0.25) 0px, transparent 50%),
+    #06030f;
+}
+
+/* glass card */
+.glass {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.06) 0%, rgba(76, 29, 149, 0.03) 100%);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(168, 122, 255, 0.18);
+}
+
+.glass-strong {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(76, 29, 149, 0.06) 100%);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(168, 122, 255, 0.25);
+}
+
+/* gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #c084fc 0%, #a855f7 50%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-bright {
+  background: linear-gradient(135deg, #f5f3ff 0%, #c084fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* shimmer text effect for big headings */
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #a855f7 0%,
+    #f5f3ff 25%,
+    #c084fc 50%,
+    #f5f3ff 75%,
+    #a855f7 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+
+/* button styles */
+.btn-primary {
+  background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(139, 92, 246, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: rgba(139, 92, 246, 0.08);
+  border: 1px solid rgba(168, 122, 255, 0.3);
+  transition: all 0.2s ease;
+}
+.btn-secondary:hover {
+  background: rgba(139, 92, 246, 0.15);
+  border-color: rgba(168, 122, 255, 0.5);
+}
+
+/* glow ring */
+.glow-ring {
+  position: relative;
+}
+.glow-ring::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, #c084fc, #8b5cf6, #4c1d95);
+  border-radius: inherit;
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0.6;
+}
+
+/* dot pattern */
+.dot-pattern {
+  background-image: radial-gradient(circle, rgba(168, 122, 255, 0.15) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* marquee */
+.marquee-wrap {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+
+/* grain texture overlay */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* divider line */
+.div-glow {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(168, 122, 255, 0.5), transparent);
+}
+
+/* number flip animation */
+.num-flip {
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
