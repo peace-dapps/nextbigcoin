@@ -12,11 +12,11 @@ const steps = [
     cta: null,
   },
   {
-    n: "03",
-    title: "Ready on Launch Day",
-    desc: "When $NBC goes live on June 4th, the buy button on this page will deep-link you straight to Jupiter. Confirm the swap and you're in.",
-    cta: null,
-  },
+  n: "03",
+  title: "Ready to Buy",
+  desc: "Tap the buy button on this page — it deep-links you straight to Jupiter with $NBC pre-filled. Confirm the swap and you're in.",
+  cta: null,
+},
 ];
 
 export default function WalletGuide() {
@@ -29,8 +29,8 @@ export default function WalletGuide() {
             Set up <span className="gradient-text">in 3 steps.</span>
           </h2>
           <p className="text-purple-100/60 mt-4 max-w-2xl mx-auto text-base sm:text-lg">
-            Never bought a Solana token before? No problem. By launch day you'll be ready to buy in under 30 seconds.
-          </p>
+  Never bought a Solana token before? No problem. Under 30 seconds, you're holding $NBC.
+</p>
         </div>
 
         <div className="grid sm:grid-cols-3 gap-4 sm:gap-5">
